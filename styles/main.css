@@ -10,7 +10,7 @@ html{
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     border: 3px solid steelblue;
     box-shadow: 5px 5px 12px 5px grey;
     margin: 0 auto;
@@ -36,6 +36,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: white;
+    transition: all ease-in-out 300ms ;
 
 }
 #nav_menu ul ul {
@@ -71,20 +72,21 @@ display: block;
 }
 #nav_list li{
     width: 100%;
-    border: 3px solid steelblue;
-    border-radius: 5px;
 
 }
 #nav_list a {
-    padding: .5em;
+    padding: .25em;
     display: block;
     text-decoration: none;
     background-color: lightsteelblue;
-    color: black;
+    color: white;
+    transition: all ease-in-out 300ms;
+    /* border: 3px solid steelblue; */
+    border-radius: 5px;
 }
 #nav_list a:hover {
-    color: white;
-    background-color: steelblue;
+    color: black;
+    background-color: lightsteelblue;
 
 }
 
@@ -112,7 +114,10 @@ main{
     justify-content: space-around;
 }
 section{
-    max-width: 75%;
+    flex: 0 1 25%;
+}
+aside{
+    flex: 0 1 25%;
 }
 p, blockquote{ 
     margin-bottom: 12px;
@@ -137,6 +142,10 @@ h2, h3{
 .pagetop{
     text-align: center;
     padding-top: 20px;
+    font-size: 300%;
+    font-variant: small-caps;
+    color: lightsteelblue;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
 }
 section h3{
     padding-left: 1.5rem;
@@ -144,7 +153,8 @@ section h3{
 
 aside h2{
     padding-left: 1.5rem;
-    padding-top: 20px;
+    text-align: center;
+    color: maroon;
 }
 aside ul{
     padding-left: 3rem;
@@ -156,6 +166,25 @@ aside a{
     font-weight: bold;
     line-height: 1,5;
 }
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    padding-top: 20px;
+}
+
+article img{
+    max-width: 250px;
+    border: 3px double steelblue;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px grey;
+}
+
+section div{
+    display: flex;
+}
+
 section a:link, section a:visited{
     color:maroon
 }
