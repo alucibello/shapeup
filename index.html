@@ -5,6 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A website that helps you shape up">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+	</script>
+
+
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<title>Shape Up</title>
 </head>
@@ -18,6 +29,7 @@
 	</div>
 	</header>
 	<!-- Navigation bar -->
+	 <nav id="mobilemenu"></nav>
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.html">Home</a></li>

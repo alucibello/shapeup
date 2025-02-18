@@ -71,7 +71,8 @@ display: block;
     gap: .5em;
 }
 #nav_list li{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 
 }
 #nav_list a {
@@ -116,6 +117,9 @@ main{
 section{
     flex: 0 1 25%;
 }
+#thirdcol h4{
+    padding: .5rem;
+}
 aside{
     flex: 0 1 25%;
 }
@@ -125,7 +129,7 @@ p, blockquote{
 
 }
 p{
-    padding: 0 1.5rem;
+    padding: .75rem;
 }
 blockquote{
     margin: 0 4em 20px;
@@ -136,9 +140,9 @@ blockquote{
 aside a{
     font-weight: bold;
 }
-h2, h3{
+h2, {
         margin-bottom: 15px;
-    }
+}
 .pagetop{
     text-align: center;
     padding-top: 20px;
@@ -148,16 +152,13 @@ h2, h3{
     text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
 }
 section h3{
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
 }
 
 aside h2{
-    padding-left: 1.5rem;
+    
     text-align: center;
     color: maroon;
-}
-aside ul{
-    padding-left: 3rem;
 }
 .offer{
     padding-left: 1.5rem;
@@ -182,6 +183,9 @@ article img{
 }
 
 section div{
+    align-items: center;
+    margin-left: 1rem;
+    gap: .75rem;
     display: flex;
 }
 
@@ -210,4 +214,54 @@ footer p{
     font-variant: small-caps;
     color: white;
 
+}
+#mobilemenu{
+    display: none;
+}
+/* ************************************************************* */
+/* *****************media queries ****************************** */
+@media only screen and (max-width: 900px){
+    body {
+        box-shadow: none;
+        font-size: 90%;
+
+    }
+main {
+flex-wrap: wrap;
+}
+#firstcol {
+    order: 3;
+    margin: 0 auto;    
+}
+section{
+    flex: 0 1 75%;
+}
+}
+@media only screen and (max-width: 767px){
+    #mobilemenu{
+        display: block;
+    }
+    #nav_menu{
+        display: none;
+    }
+    .slicknav_menu{
+        background-color: steelblue;
+    }
+    .pagetop{
+        font-size: 250%;
+
+    }
+    main{
+        flex-direction: column;
+
+    }
+}
+@media only screen and (max-width: 479px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .pagetop{
+        font-size: 200%;
+    }
 }
